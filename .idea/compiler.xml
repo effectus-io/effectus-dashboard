@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="io.effectus.dashboard.effectus-dashboard-angular.main" target="1.8" />
+      <module name="io.effectus.dashboard.effectus-dashboard-angular.test" target="1.8" />
       <module name="io.effectus.dashboard.effectus-dashboard-server.main" target="1.8" />
       <module name="io.effectus.dashboard.effectus-dashboard-server.test" target="1.8" />
     </bytecodeTargetLevel>
