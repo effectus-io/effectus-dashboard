@@ -1,0 +1,71 @@
+allprojects {
+
+    group 'io.effectus.dashboard'
+    version '0.1.0-SNAPSHOT'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+}
+
+subprojects {
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    jar {
+        manifest {
+            attributes('Implementation-Title': project.name,
+                    'Implementation-Version': project.version)
+        }
+    }
+
+    ext {
+        logback = '1.2.3'
+        slf4j = '1.7.21'
+        junit = '5.3.1'
+        lombok = '1.18.4'
+    }
+
+    dependencies {
+
+        // code generation
+        annotationProcessor("org.projectlombok:lombok:$lombok")
+        compileOnly("org.projectlombok:lombok:$lombok")
+//        compile group: 'org.projectlombok', name: 'lombok', version: lombok
+
+        // logging
+        compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j
+        compile group: 'ch.qos.logback', name: 'logback-core', version: logback
+        compile group: 'ch.qos.logback', name: 'logback-classic', version: logback
+        compile group: 'ch.qos.logback', name: 'logback-access', version: logback
+
+        // test
+        testAnnotationProcessor "org.projectlombok:lombok:$lombok"
+        testCompileOnly "org.projectlombok:lombok:$lombok"
+
+        testCompile 'org.assertj:assertj-core:3.9.0'
+        testCompile 'org.mockito:mockito-core:2.11.0'
+
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junit
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: junit
+        testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junit
+
+    }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            showStandardStreams true
+            exceptionFormat 'full'
+            events "passed", "skipped", "failed"
+        }
+    }
+
+}
+

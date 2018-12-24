@@ -1,1 +1,3 @@
 rootProject.name = 'effectus-dashboard'
+include 'effectus-dashboard-server'
+

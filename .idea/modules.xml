@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/effectus-dashboard.iml" filepath="$PROJECT_DIR$/.idea/effectus-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.effectus.dashboard.effectus-dashboard.iml" filepath="$PROJECT_DIR$/.idea/modules/io.effectus.dashboard.effectus-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.effectus.dashboard.effectus-dashboard-server.iml" filepath="$PROJECT_DIR$/.idea/modules/io.effectus.dashboard.effectus-dashboard-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/effectus-dashboard-server/io.effectus.dashboard.effectus-dashboard-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/effectus-dashboard-server/io.effectus.dashboard.effectus-dashboard-server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/effectus-dashboard-server/io.effectus.dashboard.effectus-dashboard-server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/effectus-dashboard-server/io.effectus.dashboard.effectus-dashboard-server.test.iml" />
     </modules>
   </component>
 </project>
