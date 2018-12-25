@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+
+  zookeeper:
+    image: effectus/effectus-zookeeper-server:0.1.0-SNAPSHOT
+    ports:
+      - 2181:2181
+    networks:
+      - effectus
+
+  ignite:
+    image: effectus/effectus-dashboard-server:0.1.0-SNAPSHOT
+    networks:
+      - effectus
+
+networks:
+  effectus:

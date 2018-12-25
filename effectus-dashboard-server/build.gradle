@@ -7,9 +7,13 @@ plugins {
 dependencies {
 
 //    compile project(':effectus-ignite-schedule')
+    compile 'io.vertx:vertx-core:3.6.2'
+    compile 'io.vertx:vertx-zookeeper:3.6.2'
+    compile 'io.vertx:vertx-service-discovery:3.6.2'
+
 }
 
-mainClassName = 'io.effectus.ignite.server.Launcher'
+mainClassName = 'io.effectus.dashboard.server.Launcher'
 
 dockerDistTar {
     environmentVariable('JAVA_OPTS', '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:+DisableExplicitGC -Xms512m -Xmx512m -XX:+UseG1GC')

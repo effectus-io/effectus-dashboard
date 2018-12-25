@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.vertx:vertx-zookeeper:3.6.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vertx/vertx-zookeeper/3.6.2/c5375343539c172be3b79e5bc1c7417cca089d11/vertx-zookeeper-3.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vertx/vertx-zookeeper/3.6.2/41d20fa342c47f1ed6e06450144c9aba37e43f6/vertx-zookeeper-3.6.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
