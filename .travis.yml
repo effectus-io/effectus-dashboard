@@ -1,5 +1,8 @@
 language: java
 
+services:
+  - docker
+
 jdk:
   - openjdk8
   -
@@ -14,6 +17,7 @@ cache:
 script:
   - ./gradlew clean build
   - docker images
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   #  - docker tag effectus/effectus-dashboard-server effectus/effectus-dashboard-server:latest
   - docker push effectus/effectus-dashboard-server
 
