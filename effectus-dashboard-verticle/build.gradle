@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+}
+
+dependencies {
+
+    compile 'io.vertx:vertx-core:3.6.2'
+    compile 'io.vertx:vertx-web:3.6.2'
+//    compile 'io.vertx:vertx-zookeeper:3.6.2'
+    compile 'io.vertx:vertx-service-discovery:3.6.2'
+
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+build.finalizedBy(publishToMavenLocal)
+
+task copyBin(type: Copy) {
+    from project(':effectus-dashboard-angular').file('dist')
+    into file('build/resources/main')
+}
+
+assemble.finalizedBy(copyBin)
