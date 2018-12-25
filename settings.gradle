@@ -2,4 +2,5 @@ rootProject.name = 'effectus-dashboard'
 
 include 'effectus-dashboard-server'
 include 'effectus-dashboard-angular'
+include 'effectus-dashboard-verticle'
 

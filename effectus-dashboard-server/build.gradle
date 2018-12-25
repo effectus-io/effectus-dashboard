@@ -6,10 +6,10 @@ plugins {
 
 dependencies {
 
-//    compile project(':effectus-ignite-schedule')
+    compile project(':effectus-dashboard-verticle')
+
     compile 'io.vertx:vertx-core:3.6.2'
     compile 'io.vertx:vertx-zookeeper:3.6.2'
-    compile 'io.vertx:vertx-service-discovery:3.6.2'
 
 }
 

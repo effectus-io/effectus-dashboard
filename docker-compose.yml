@@ -11,6 +11,8 @@ services:
 
   ignite:
     image: effectus/effectus-dashboard-server:0.1.0-SNAPSHOT
+    ports:
+      - 8080:8080
     networks:
       - effectus
 

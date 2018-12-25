@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/effectus-dashboard-angular" />
             <option value="$PROJECT_DIR$/effectus-dashboard-server" />
+            <option value="$PROJECT_DIR$/effectus-dashboard-verticle" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />
