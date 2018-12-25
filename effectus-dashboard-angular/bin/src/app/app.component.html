@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="#">Account</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">
+      <app-sidenav></app-sidenav>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<app-footer></app-footer>
