@@ -7,10 +7,6 @@
         </encoder>
     </appender>
 
-    <logger name="io.effectus.dashboard.server" level="INFO" additivity="false">
-        <appender-ref ref="STDOUT"/>
-    </logger>
-
     <logger name="io.effectus.dashboard.verticle" level="INFO" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>

@@ -1,11 +1,13 @@
-
 <app-navbar></app-navbar>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="#">Account</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item" routerLinkActive="active">
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item" routerLinkActive="active">
+      <a routerLink="/accounts" routerLinkActive="active">Accounts</a>
+    </li>
   </ol>
 </nav>
 
@@ -20,6 +22,6 @@
   </div>
 </div>
 
-<hr>
+<hr/>
 
 <app-footer></app-footer>
