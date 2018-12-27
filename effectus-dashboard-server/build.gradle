@@ -27,7 +27,7 @@ docker {
     javaApplication {
         baseImage = 'openjdk:8-jre-alpine'
         maintainer = 'Gadi Eichhorn "gadi.eichhorn@realisedatasystems.com"'
-        ports = [8181]
+        ports = [8080]
         tag = 'effectus/' + project.name + ':' + project.version
     }
 }

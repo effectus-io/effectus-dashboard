@@ -30,6 +30,7 @@ subprojects {
         slf4j = '1.7.21'
         junit = '5.3.1'
         lombok = '1.18.4'
+        vertx = '3.6.2'
     }
 
     dependencies {

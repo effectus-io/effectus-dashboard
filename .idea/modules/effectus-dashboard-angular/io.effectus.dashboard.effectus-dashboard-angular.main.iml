@@ -3,9 +3,6 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../../effectus-dashboard-angular/out/production/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../effectus-dashboard-angular/dist">
-      <sourceFolder url="file://$MODULE_DIR$/../../../effectus-dashboard-angular/dist" type="java-resource" />
-    </content>
     <content url="file://$MODULE_DIR$/../../../effectus-dashboard-angular/src/main" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

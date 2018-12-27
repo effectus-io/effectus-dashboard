@@ -30,22 +30,17 @@ public class DashboardVerticle extends AbstractVerticle {
 
         router.route("/*").handler(BodyHandler.create());
 
-//        router.route().handler(routingContext -> {
-//
-//            // This handler will be called for every request
-//            HttpServerResponse response = routingContext.response();
-//            response.putHeader("content-type", "text/plain");
-//
-//            // Write to the response and end it
-//            response.end("Hello World from Vert.x-Web!");
-//        });
-
         router.route(HttpMethod.GET, "/*")
                 .handler(StaticHandler.create("dashboard", this.getClass().getClassLoader()).setCachingEnabled(false));
 
-        server.requestHandler(router).listen(8080);
-
-        startFuture.complete();
+        server.requestHandler(router).listen(8080, event -> {
+            if (event.succeeded()) {
+                log.info("DASHBOARD server listening on port 8080");
+                startFuture.complete();
+            } else {
+                startFuture.fail(event.cause());
+            }
+        });
     }
 
     @Override
