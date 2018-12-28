@@ -4,7 +4,7 @@ plugins {
 
 task buildProduction(type: NpmTask) {
   // install the express package only
-  args = ['run', 'build', '--prod']
+  args = ['run', 'build-prod']
 }
 
 processResources.dependsOn(npmInstall)

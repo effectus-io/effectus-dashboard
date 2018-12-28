@@ -22,9 +22,9 @@ publishing {
 
 build.finalizedBy(publishToMavenLocal)
 
-task copyBin(type: Copy) {
+task copyDashboard(type: Copy) {
     from project(':effectus-dashboard-angular').file('dist')
     into file('build/resources/main')
 }
 
-assemble.finalizedBy(copyBin)
+processResources.dependsOn(copyDashboard)
