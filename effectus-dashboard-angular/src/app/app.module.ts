@@ -7,6 +7,8 @@ import {NavbarComponent}from './navbar/navbar.component';
 import {SidenavComponent}from './sidenav/sidenav.component';
 import {FooterComponent}from './footer/footer.component';
 import {EffectusModule }from './effectus/effectus.module';
+import {GraphQLModule}from './graphql.module';
+import {HttpClientModule }from '@angular/common/http';
 
 @NgModule({
 declarations: [
@@ -18,7 +20,9 @@ FooterComponent
   imports: [
     BrowserModule,
 AppRoutingModule,
-EffectusModule
+EffectusModule,
+GraphQLModule,
+HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

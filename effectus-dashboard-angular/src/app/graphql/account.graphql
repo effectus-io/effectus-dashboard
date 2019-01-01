@@ -1,0 +1,14 @@
+
+
+query accounts($offset: Int, $first: Int) {
+  accounts(offset: $offset, first: $first) {
+    key
+  }
+}
+
+query account($key: ID!) {
+  account(key: $key) {
+    key
+    name
+  }
+}
