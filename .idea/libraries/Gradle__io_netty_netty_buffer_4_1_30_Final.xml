@@ -2,7 +2,6 @@
   <library name="Gradle: io.netty:netty-buffer:4.1.30.Final">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.30.Final/netty-buffer-4.1.30.Final.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.30.Final/597adb653306470fb3ec1af3c0f3f30a37b1310a/netty-buffer-4.1.30.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

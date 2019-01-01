@@ -2,7 +2,6 @@
   <library name="Gradle: io.netty:netty-codec-dns:4.1.30.Final">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec-dns/4.1.30.Final/netty-codec-dns-4.1.30.Final.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-dns/4.1.30.Final/7d28ce324f6cd5ae4ddd7f3e5027e2a7f126740b/netty-codec-dns-4.1.30.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

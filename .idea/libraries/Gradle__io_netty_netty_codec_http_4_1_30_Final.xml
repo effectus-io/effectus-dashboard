@@ -2,7 +2,6 @@
   <library name="Gradle: io.netty:netty-codec-http:4.1.30.Final">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.30.Final/netty-codec-http-4.1.30.Final.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.30.Final/1384c630e8a0eeef33ad12a28791dce6e1d8767c/netty-codec-http-4.1.30.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
