@@ -1,7 +1,5 @@
 <div class="card">
-  <div class="card-header card-header-primary">
-    Accounts
-  </div>
+  <div class="card-header card-header-primary">Accounts</div>
   <table class="table table-hover">
     <thead>
     <tr>
@@ -10,9 +8,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let account of accounts">
-      <td>{{account.key}}</td>
-      <td>{{account.name}}</td>
+    <tr *ngFor="let account of (accounts | async)">
+      <td>
+        <a [routerLink]="['/account', account.key]">{{ account.key }}</a>
+      </td>
+      <td>{{ account.name }}</td>
     </tr>
     </tbody>
   </table>
@@ -36,4 +36,3 @@
     </nav>
   </div>
 </div>
-
