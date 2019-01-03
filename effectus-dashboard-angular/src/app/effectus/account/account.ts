@@ -1,4 +1,4 @@
-exportinterfaceAccount {
-  key:string;
-name: string;
-}
+export interface Account {
+    key: string;
+    name: string;
+  }

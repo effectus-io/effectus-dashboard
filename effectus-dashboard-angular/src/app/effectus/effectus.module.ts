@@ -1,32 +1,28 @@
-import{NgModule}from"@angular/core";
-import {CommonModule }from "@angular/common";
-import {CustomersComponent}from "./customers/customers.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {TeamsComponent}from "./teams/teams.component";
-import { ProjectsComponent}from "./projects/projects.component";
-import {ResourcesComponent}from "./resources/resources.component";
-import {TasksComponent}from "./tasks/tasks.component";
-import {AssignmentsComponent} from "./assignments/assignments.component";
-import {UsersComponent}from "./users/users.component";
-import { UserDetailComponent}from "./user-detail/user-detail.component";
-import {EffectusRoutingModule}from "./effectus-routing.module";
-import { AccountModule}from "./account/account.module";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { AccountModule } from "./account/account.module";
+import { EffectusRoutingModule } from "./effectus-routing.module";
+import { ResourceModule } from "./resource/resource.module";
+import { AssignmentModule } from "./assignment/assignment.module";
+import { TaskModule } from "./task/task.module";
+import { CustomerModule } from "./customer/customer.module";
+import { TeamModule } from "./team/team.module";
+import { UserModule } from "./user/user.module";
 
 @NgModule({
-declarations: [
-CustomersComponent,
-DashboardComponent,
-TeamsComponent,
-ProjectsComponent,
-ResourcesComponent,
-TasksComponent,
-AssignmentsComponent,
-UsersComponent,
-UserDetailComponent
-],
-imports: [CommonModule, EffectusRoutingModule, AccountModule],
-exports: []
+  declarations: [DashboardComponent],
+  imports: [
+    CommonModule,
+    EffectusRoutingModule,
+    AccountModule,
+    ResourceModule,
+    AssignmentModule,
+    TaskModule,
+    CustomerModule,
+    TeamModule,
+    UserModule
+  ],
+  exports: []
 })
-export class EffectusModule {
-
-}
+export class EffectusModule {}
