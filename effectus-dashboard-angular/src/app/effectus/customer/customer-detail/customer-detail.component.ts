@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { Customer } from "../customer";
+
 import { Observable } from "rxjs";
 import { map ,switchMap} from "rxjs/operators";
-import { CustomerGQL } from "../customer-query";
 import { ActivatedRoute } from "@angular/router";
+
+import { CustomerGQL } from "../query/customer.query";
+import { Customer } from "../entity/customer";
 
 @Component({
   selector: "app-customer-detail",

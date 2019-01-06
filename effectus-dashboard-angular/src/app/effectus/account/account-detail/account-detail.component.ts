@@ -10,7 +10,7 @@ templateUrl: "./account-detail.component.html",
 styleUrls: ["./account-detail.component.scss"]
 })
 export class AccountDetailComponent implements OnInit {
-account: Observable< Account>;
+account: Observable<Account>;
 
 constructor(private accountGQL: AccountGQL, private route: ActivatedRoute) {}
 

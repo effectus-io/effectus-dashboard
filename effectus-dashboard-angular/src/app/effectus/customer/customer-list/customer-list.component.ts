@@ -1,9 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { CustomersGQL } from "../customers-query";
 
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { Customer } from "../customer";
+
+import { Customer } from "../entity/customer";
+import { CustomersGQL } from "../query/customers.query";
 
 @Component({
   selector: "app-customer-list",

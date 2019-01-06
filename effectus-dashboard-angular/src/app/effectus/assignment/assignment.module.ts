@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AssignmentsComponent } from './assignments/assignments.component';
 import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
 import { EffectusRoutingModule } from '../effectus-routing.module';
+import { AssignmentListComponent } from './assignment-list/assignment-list.component';
+import { AssignmentGQL } from './query/assignment.query';
+import { AssignmentsGQL } from './query/assignments.query';
 
 @NgModule({
-  declarations: [AssignmentDetailComponent, AssignmentsComponent],
+  declarations: [AssignmentDetailComponent, AssignmentListComponent],
   imports: [CommonModule, EffectusRoutingModule],
+  providers: [AssignmentGQL, AssignmentsGQL]
 })
 export class AssignmentModule { }
