@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
-import { Customer } from "../entity/customer";
+import { Customer } from "../entity/customer.entity";
 import { CustomersGQL } from "../query/customers.query";
 
 @Component({

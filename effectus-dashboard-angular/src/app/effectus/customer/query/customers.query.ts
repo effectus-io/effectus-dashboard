@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Query } from "apollo-angular";
 import gql from "graphql-tag";
 
-import { Customer } from "../entity/customer";
+import { Customer } from "../entity/customer.entity";
 
 export interface Response {
   customers: Customer[];

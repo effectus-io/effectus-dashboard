@@ -1,18 +1,20 @@
-import{Component, OnInit}from "@angular/core";
-import {AccountGQL}from "../account-query";
-import {Observable}from "rxjs";
-import {map, switchMap} from "rxjs/operators";
-import { ActivatedRoute}from "@angular/router";
+import { Component, OnInit } from "@angular/core";
+
+import { Observable } from "rxjs";
+import { map, switchMap } from "rxjs/operators";
+
+import { ActivatedRoute } from "@angular/router";
+import { AccountGQL } from "../query/account.query";
 
 @Component({
-selector: "app-account-detail",
-templateUrl: "./account-detail.component.html",
-styleUrls: ["./account-detail.component.scss"]
+  selector: "app-account-detail",
+  templateUrl: "./account-detail.component.html",
+  styleUrls: ["./account-detail.component.scss"]
 })
 export class AccountDetailComponent implements OnInit {
-account: Observable<Account>;
+  account: Observable<Account>;
 
-constructor(private accountGQL: AccountGQL, private route: ActivatedRoute) {}
+  constructor(private accountGQL: AccountGQL, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.account = this.route.paramMap.pipe(

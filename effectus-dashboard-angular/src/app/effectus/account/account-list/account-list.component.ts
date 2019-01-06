@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { AccountsGQL } from "../accounts-query";
+
+import { AccountsGQL } from "../query/accounts.query";
 
 @Component({
   selector: "app-account-list",

@@ -5,7 +5,7 @@ import { map ,switchMap} from "rxjs/operators";
 import { ActivatedRoute } from "@angular/router";
 
 import { CustomerGQL } from "../query/customer.query";
-import { Customer } from "../entity/customer";
+import { Customer } from "../entity/customer.entity";
 
 @Component({
   selector: "app-customer-detail",

@@ -2,20 +2,20 @@ import { Injectable } from "@angular/core";
 import { Query } from "apollo-angular";
 import gql from "graphql-tag";
 
-import { Customer } from "../entity/customer.entity";
+import { Team } from "../entity/team.entity";
 
 export interface Response {
-  customer: Customer;
+  team: Team;
 }
 
 @Injectable()
-export class CustomerGQL extends Query<Response> {
+export class TeamGQL extends Query<Response> {
   document = gql`
-    query customer($key: ID!) {
-      customer(key: $key) {
+    query team($key: ID!) {
+      team(key: $key) {
         key
-        name
         account
+        name
       }
     }
   `;

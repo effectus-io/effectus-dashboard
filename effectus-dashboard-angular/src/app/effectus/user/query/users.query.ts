@@ -2,20 +2,19 @@ import { Injectable } from "@angular/core";
 import { Query } from "apollo-angular";
 import gql from "graphql-tag";
 
-import { Customer } from "../entity/customer.entity";
+import { User } from "../entity/user.entity";
 
 export interface Response {
-  customer: Customer;
+ users: User[];
 }
 
 @Injectable()
-export class CustomerGQL extends Query<Response> {
+export class UsersGQL extends Query<Response> {
   document = gql`
-    query customer($key: ID!) {
-      customer(key: $key) {
+    query users($offset: Int) {
+      users(offset: $offset, first: 10) {
         key
         name
-        account
       }
     }
   `;
