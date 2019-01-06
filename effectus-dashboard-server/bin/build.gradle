@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+    id 'com.bmuschko.docker-java-application' version '4.2.0'
+    id 'com.bmuschko.docker-remote-api' version '4.2.0'
+}
+
+dependencies {
+
+    compile project(':effectus-dashboard-verticle')
+
+    compile 'io.vertx:vertx-core:3.6.2'
+    compile 'io.vertx:vertx-zookeeper:3.6.2'
+
+}
+
+mainClassName = 'io.effectus.dashboard.server.Launcher'
+
+dockerDistTar {
+    environmentVariable('JAVA_OPTS', '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:+DisableExplicitGC -Xms512m -Xmx512m -XX:+UseG1GC')
+}
+
+docker {
+
+//    url = 'https://192.168.14.4:2376'
+//    certPath = new File(System.properties['user.home'], '.docker/machine/certs/')
+
+    javaApplication {
+        baseImage = 'openjdk:8-jre-alpine'
+        maintainer = 'Gadi Eichhorn "gadi.eichhorn@realisedatasystems.com"'
+        ports = [8080]
+        tag = 'effectus/' + project.name + ':' + project.version
+    }
+}
+
+build.finalizedBy(dockerBuildImage)
