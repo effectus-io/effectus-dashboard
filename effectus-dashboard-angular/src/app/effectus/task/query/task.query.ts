@@ -17,6 +17,10 @@ export class TaskGQL extends Query<Response> {
         account
         project
         customer
+        location {
+          longitude
+          latitude
+        }
       }
     }
   `;

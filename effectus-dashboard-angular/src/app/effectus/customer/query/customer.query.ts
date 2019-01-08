@@ -16,6 +16,12 @@ export class CustomerGQL extends Query<Response> {
         key
         name
         account
+        address {
+          city
+          country
+          street
+          number
+        }
       }
     }
   `;

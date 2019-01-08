@@ -17,6 +17,9 @@ import { AssignmentListComponent } from "./assignment/assignment-list/assignment
 import { AssignmentDetailComponent } from "./assignment/assignment-detail/assignment-detail.component";
 import { UserListComponent } from "./user/user-list/user-list.component";
 import { UserDetailComponent } from "./user/user-detail/user-detail.component";
+import { DictionaryListComponent } from "./dictionary/dictionary-list/dictionary-list.component";
+import { DictionaryDetailComponent } from "./dictionary/dictionary-detail/dictionary-detail.component";
+import { GanttComponent } from "./gantt/gantt.component";
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
@@ -75,6 +78,17 @@ const routes: Routes = [
       { path: "", component: UserListComponent },
       { path: ":key", component: UserDetailComponent }
     ]
+  },
+  {
+    path: "dictionary",
+    children: [
+      { path: "", component: DictionaryListComponent },
+      { path: ":key", component: DictionaryDetailComponent }
+    ]
+  },
+  {
+    path: "gantt",
+    component: GanttComponent
   }
 ];
 

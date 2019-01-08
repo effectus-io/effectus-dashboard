@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { map, switchMap } from "rxjs/operators";
 
 import { User } from '../entity/user.entity';
+
 import { ActivatedRoute } from '@angular/router';
 import { UserGQL } from '../query/user.query';
 

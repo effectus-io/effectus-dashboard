@@ -1,0 +1,9 @@
+<p>gantt works!</p>
+
+<svg #svg class="container" height="500">
+  
+  <g travelVisual [source]="travel.source" [target]="travel.target" *ngFor="let travel of travels"></g>
+  <g resourceVisual [location]="travel.source" *ngFor="let travel of travels"></g>
+  <g resourceVisual [location]="travel.target" *ngFor="let travel of travels"></g>
+
+</svg>

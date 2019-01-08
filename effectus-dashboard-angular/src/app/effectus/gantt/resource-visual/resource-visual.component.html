@@ -1,0 +1,14 @@
+
+<svg:g [attr.transform]="'translate(' + location.x + ',' + location.y + ')'">
+  <svg:circle
+      class="resource"
+      cx="0"
+      cy="0"
+      [attr.r]="10">
+  </svg:circle>
+  <svg:text
+      class="resource-name"
+      [attr.font-size]="10">
+    {{location.x}}
+  </svg:text>
+</svg:g>
