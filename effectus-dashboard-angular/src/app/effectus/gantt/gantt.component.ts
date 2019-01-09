@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Travel } from "./entity/travel.entity";
 import { Location } from "./entity/location.entity";
+import { D3Service } from "src/app/d3/services/d3.service";
 
 @Component({
   selector: "app-gantt",
@@ -11,7 +12,9 @@ import { Location } from "./entity/location.entity";
 export class GanttComponent implements OnInit {
   travels: Travel[] = [];
 
-  constructor() {}
+  constructor(private d3service: D3Service) {
+    // d3service.applyZoomableBehaviour
+  }
 
   ngOnInit() {
     for (let i = 1; i <= 10; i++) {

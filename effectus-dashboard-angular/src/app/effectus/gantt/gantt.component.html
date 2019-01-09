@@ -1,9 +1,42 @@
-<p>gantt works!</p>
+<h1>Gantt (Map)</h1>
+<p>This is a schematic representation of points on the map.</p>
+<p>
+  The map is flat and is 500 / 500 units. The Genetic Optimizer will display
+  progress with tasks per resource
+</p>
+<p>
+  This should demonstrate the optimizer speed and quality. The domain problem is
+  still very simple but has many moving parts
+</p>
 
-<svg #svg class="container" height="500">
-  
-  <g travelVisual [source]="travel.source" [target]="travel.target" *ngFor="let travel of travels"></g>
-  <g resourceVisual [location]="travel.source" *ngFor="let travel of travels"></g>
-  <g resourceVisual [location]="travel.target" *ngFor="let travel of travels"></g>
-
+<svg #svg class="container-fluid" height="600">
+  <g zoomable>
+    <rect width="600" height="600" fill="#ecf0f1" />
+    <g transform="translate(50,50)">
+      <g
+        travelVisual
+        [source]="travel.source"
+        [target]="travel.target"
+        *ngFor="let travel of travels"
+      ></g>
+      <g
+        resourceVisual
+        [location]="travel.source"
+        *ngFor="let travel of travels"
+      ></g>
+      <g
+        resourceVisual
+        [location]="travel.target"
+        *ngFor="let travel of travels"
+      ></g>
+    </g>
+  </g>
+  <g zoomable>
+    <g transform="translate(650,50)">
+      <rect class="task" x="0" y="0" width="20" height="20" fill="#F39C12" />
+      <rect class="task" x="30" y="0" width="40" height="20" fill="#3498DB" />
+      <rect class="task" x="110" y="0" width="10" height="20" fill="#F39C12" />
+      <rect class="task" x="150" y="0" width="140" height="20" fill="#3498DB" />
+    </g>
+  </g>
 </svg>

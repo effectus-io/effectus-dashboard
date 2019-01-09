@@ -14,7 +14,7 @@ export class ResourceVisualComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.location);
+    console.debug(this.location);
   }
 
   get color(): RGBColor {

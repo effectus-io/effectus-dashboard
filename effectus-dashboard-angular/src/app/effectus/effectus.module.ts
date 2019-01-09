@@ -14,6 +14,7 @@ import { DictionaryModule } from "./dictionary/dictionary.module";
 import { GanttComponent } from "./gantt/gantt.component";
 import { ResourceVisualComponent } from "./gantt/resource-visual/resource-visual.component";
 import { TravelVisualComponent } from "./gantt/travel-visual/travel-visual.component";
+import { D3Module } from "../d3/d3.module";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TravelVisualComponent } from "./gantt/travel-visual/travel-visual.compo
     ProjectModule,
     TeamModule,
     UserModule,
-    DictionaryModule
+    DictionaryModule,
+    D3Module
   ],
   exports: []
 })

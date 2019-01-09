@@ -14,6 +14,7 @@ export class TravelVisualComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.source);
+    console.debug(this.source);
+    console.debug(this.target);
   }
 }
