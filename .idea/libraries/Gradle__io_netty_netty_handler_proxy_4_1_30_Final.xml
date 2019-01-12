@@ -2,6 +2,7 @@
   <library name="Gradle: io.netty:netty-handler-proxy:4.1.30.Final">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-handler-proxy/4.1.30.Final/netty-handler-proxy-4.1.30.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.30.Final/1baa1568fa936caddca0fae96fdf127fd5cbad16/netty-handler-proxy-4.1.30.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

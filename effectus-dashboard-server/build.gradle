@@ -15,6 +15,10 @@ dependencies {
 
 mainClassName = 'io.effectus.dashboard.server.Launcher'
 
+application {
+    applicationDefaultJvmArgs = ["-Dvertx.disableDnsResolver=true"]
+}
+
 dockerDistTar {
     environmentVariable('JAVA_OPTS', '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:+DisableExplicitGC -Xms512m -Xmx512m -XX:+UseG1GC')
 }

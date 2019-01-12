@@ -20,12 +20,15 @@ import { UserDetailComponent } from "./user/user-detail/user-detail.component";
 import { DictionaryListComponent } from "./dictionary/dictionary-list/dictionary-list.component";
 import { DictionaryDetailComponent } from "./dictionary/dictionary-detail/dictionary-detail.component";
 import { GanttComponent } from "./gantt/gantt.component";
+import { UserLoginComponent } from "./user/user-login/user-login.component";
+import { AccountCreateComponent } from "./account/account-create/account-create.component";
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
   {
     path: "account",
     children: [
+      { path: "create", component: AccountCreateComponent },
       { path: "", component: AccountListComponent },
       { path: ":key", component: AccountDetailComponent }
     ]
@@ -89,7 +92,9 @@ const routes: Routes = [
   {
     path: "gantt",
     component: GanttComponent
-  }
+  },
+  { path: "login", 
+  component: UserLoginComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,43 @@
+<p>user-login works!</p>
+
+<!-- <form [formGroup]="profileForm">
+  <label> First Name: <input type="text" formControlName="firstName" /> </label>
+  <label> Last Name: <input type="text" formControlName="lastName" /> </label>
+</form> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="firstName">
+            FIrst Name
+          </label>
+          <div class="col-sm-10">
+            <input
+            required
+              type="text"
+              class="form-control"
+              id="firstName"
+              formControlName="firstName"
+              aria-describedby="first Name"
+              placeholder="Enter Name"
+            />
+            <small id="firstName" class="form-text text-muted">
+              We'll never share your email with anyone else.</small
+            >
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!profileForm.valid">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <pre>{{ profileForm.status }}</pre>
+    </div>
+  </div>
+</div>

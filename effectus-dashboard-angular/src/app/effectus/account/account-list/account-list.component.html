@@ -1,19 +1,29 @@
+<h1>Accounts</h1>
+
+<hr>
+
+<button type="button" class="btn btn-primary" (click)="create()">
+  Create Account
+</button>
+
+<hr>
+
 <div class="card">
   <div class="card-header card-header-primary">Accounts</div>
   <table class="table table-hover">
     <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-    </tr>
+      <tr>
+        <th scope="col">Name/Link</th>
+        <th scope="col">Key</th>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let account of (accounts | async)">
-      <td>
-        <a [routerLink]="['/account', account.key]">{{ account.key }}</a>
-      </td>
-      <td>{{ account.name }}</td>
-    </tr>
+      <tr *ngFor="let account of (accounts | async)">
+        <td>
+          <a [routerLink]="['/account', account.key]">{{ account.name }}</a>
+        </td>
+        <td><span class="badge badge-secondary badge-pill"> {{ account.key }} </span></td>
+      </tr>
     </tbody>
   </table>
   <div class="card-footer text-muted">
