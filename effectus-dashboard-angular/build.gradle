@@ -4,7 +4,7 @@ plugins {
 
 task auditFix(type: NpmTask) {
   // install the express package only
-  args = ['run', 'audit-fix']
+  args = ['run', 'audit fix']
 }
 
 task buildProduction(type: NpmTask) {
@@ -13,5 +13,5 @@ task buildProduction(type: NpmTask) {
 }
 
 processResources.dependsOn(npmInstall)
-npmInstall.finalizedBy(auditFix)
+//npmInstall.finalizedBy(auditFix)
 processResources.finalizedBy(buildProduction)
