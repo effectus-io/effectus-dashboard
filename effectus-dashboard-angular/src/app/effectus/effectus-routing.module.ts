@@ -1,100 +1,71 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { AccountListComponent } from "./account/account-list/account-list.component";
-import { AccountDetailComponent } from "./account/account-detail/account-detail.component";
-import { CustomerListComponent } from "./customer/customer-list/customer-list.component";
-import { CustomerDetailComponent } from "./customer/customer-detail/customer-detail.component";
-import { ProjectListComponent } from "./project/project-list/project-list.component";
-import { ProjectDetailComponent } from "./project/project-detail/project-detail.component";
-import { TeamListComponent } from "./team/team-list/team-list.component";
-import { TeamDetailComponent } from "./team/team-detail/team-detail.component";
-import { ResourceListComponent } from "./resource/resource-list/resource-list.component";
-import { ResourceDetailComponent } from "./resource/resource-detail/resource-detail.component";
-import { TaskListComponent } from "./task/task-list/task-list.component";
-import { TaskDetailComponent } from "./task/task-detail/task-detail.component";
-import { AssignmentListComponent } from "./assignment/assignment-list/assignment-list.component";
-import { AssignmentDetailComponent } from "./assignment/assignment-detail/assignment-detail.component";
-import { UserListComponent } from "./user/user-list/user-list.component";
-import { UserDetailComponent } from "./user/user-detail/user-detail.component";
-import { DictionaryListComponent } from "./dictionary/dictionary-list/dictionary-list.component";
-import { DictionaryDetailComponent } from "./dictionary/dictionary-detail/dictionary-detail.component";
-import { GanttComponent } from "./gantt/gantt.component";
-import { UserLoginComponent } from "./user/user-login/user-login.component";
-import { AccountCreateComponent } from "./account/account-create/account-create.component";
+
+import { ProjectDetailComponent } from "./components/project-detail/project-detail.component";
+import { CustomerDetailComponent } from "./components/customer-detail/customer-detail.component";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { AccountListComponent } from "./components/account-list/account-list.component";
+import { AccountCreateComponent } from "./components/account-create/account-create.component";
+import { AccountDetailComponent } from "./components/account-detail/account-detail.component";
+import { TeamDetailComponent } from "./components/team-detail/team-detail.component";
+import { ResourceDetailComponent } from "./components/resource-detail/resource-detail.component";
+import { TaskDetailComponent } from "./components/task-detail/task-detail.component";
+import { AssignmentDetailComponent } from "./components/assignment-detail/assignment-detail.component";
+import { UserDetailComponent } from "./components/user-detail/user-detail.component";
+import { DictionaryDetailComponent } from "./components/dictionary-detail/dictionary-detail.component";
+import { GanttComponent } from "./components/gantt/gantt.component";
+import { UserLoginComponent } from "./components/user-login/user-login.component";
 
 const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
   {
     path: "account",
     children: [
-      { path: "create", component: AccountCreateComponent },
       { path: "", component: AccountListComponent },
-      { path: ":key", component: AccountDetailComponent }
-    ]
-  },
-  {
-    path: "customer",
-    children: [
-      { path: "", component: CustomerListComponent },
-      { path: ":key", component: CustomerDetailComponent }
+      { path: "create", component: AccountCreateComponent },
+      {
+        path: ":account",
+        component: AccountDetailComponent
+      }
     ]
   },
   {
     path: "project",
-    children: [
-      { path: "", component: ProjectListComponent },
-      { path: ":key", component: ProjectDetailComponent }
-    ]
+    children: [{ path: ":key", component: ProjectDetailComponent }]
+  },
+  {
+    path: "customer",
+    children: [{ path: ":key", component: CustomerDetailComponent }]
   },
   {
     path: "team",
-    children: [
-      { path: "", component: TeamListComponent },
-      { path: ":key", component: TeamDetailComponent }
-    ]
+    children: [{ path: ":key", component: TeamDetailComponent }]
   },
   {
     path: "resource",
-    children: [
-      { path: "", component: ResourceListComponent },
-      { path: ":key", component: ResourceDetailComponent }
-    ]
+    children: [{ path: ":key", component: ResourceDetailComponent }]
   },
   {
     path: "task",
-    children: [
-      { path: "", component: TaskListComponent },
-      { path: ":key", component: TaskDetailComponent }
-    ]
+    children: [{ path: ":key", component: TaskDetailComponent }]
   },
   {
     path: "assignment",
-    children: [
-      { path: "", component: AssignmentListComponent },
-      { path: ":key", component: AssignmentDetailComponent }
-    ]
+    children: [{ path: ":key", component: AssignmentDetailComponent }]
   },
   {
     path: "user",
-    children: [
-      { path: "", component: UserListComponent },
-      { path: ":key", component: UserDetailComponent }
-    ]
+    children: [{ path: ":key", component: UserDetailComponent }]
   },
   {
     path: "dictionary",
-    children: [
-      { path: "", component: DictionaryListComponent },
-      { path: ":key", component: DictionaryDetailComponent }
-    ]
+    children: [{ path: ":key", component: DictionaryDetailComponent }]
   },
   {
     path: "gantt",
     component: GanttComponent
   },
-  { path: "login", 
-  component: UserLoginComponent }
+  { path: "login", component: UserLoginComponent }
 ];
 
 @NgModule({

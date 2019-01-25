@@ -1,0 +1,38 @@
+<h3>Create Customer</h3>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label" 
+          for="name">
+            Customer Name
+          </label>
+          <div class="col-sm-8">
+            <input
+            required
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              aria-describedby="Customer Name"
+              placeholder="Enter Name"
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!customerForm.valid">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <pre>{{ customerForm.status }}</pre>
+    </div>
+  </div>
+</div>

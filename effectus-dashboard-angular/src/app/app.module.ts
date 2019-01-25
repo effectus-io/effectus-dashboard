@@ -22,7 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     EffectusModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

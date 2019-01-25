@@ -23,6 +23,7 @@ const routes: Routes = [
 // { path: "tasks", component: TasksComponent },
 // { path: "assignments", component: AssignmentsComponent },
 // { path: "users", component: UsersComponent }
+// { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

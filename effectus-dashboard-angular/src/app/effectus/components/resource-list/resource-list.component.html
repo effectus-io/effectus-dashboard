@@ -1,0 +1,16 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name/Link</th>
+      <th scope="col">Key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let resource of (resources | async)">
+      <td>
+        <a [routerLink]="['/resource', resource.key]">{{ resource.name }}</a>
+      </td>
+      <td><span class="badge badge-secondary badge-pill"> {{ resource.key }} </span></td>
+    </tr>
+  </tbody>
+</table>

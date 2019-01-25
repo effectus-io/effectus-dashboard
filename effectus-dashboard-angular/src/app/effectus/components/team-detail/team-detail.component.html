@@ -1,0 +1,24 @@
+<div *ngIf="(team | async) as team">
+
+  <h2>Team: {{ team.name }} </h2>
+  <h5><span class="badge badge-secondary badge-pill"> {{ team.key }} </span></h5>
+
+  <hr>
+
+  <pre>{{ team | json }}
+</pre>
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-resources-tab" data-toggle="tab" href="#nav-resources" role="tab"
+        aria-controls="nav-resources" aria-selected="true">Resources</a>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active panel-body" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      Resources
+    </div>
+  </div>
+
+</div>
