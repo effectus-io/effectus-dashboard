@@ -158,7 +158,11 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/java,gradle,angular,intellij
 
-.project
+# IDE-specific stuff
+.idea
+**/.project
+**/.settings
 .classpath
 
-.settings/
+# vertex
+.vertx
