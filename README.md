@@ -23,9 +23,10 @@ To start the required services run the following command:
 docker-compose -f docker-compose-dev.yml up -d
 ```
 
-Then navigate into the angular folder and start webpack:
+Then navigate into the angular folder, install node packages and start webpack:
 ```
 cd effectus-dashboard-angular
+npm install
 npm start 
 ```
 
