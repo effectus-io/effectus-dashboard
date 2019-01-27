@@ -1,8 +1,10 @@
 plugins {
     id 'application'
-    id 'com.bmuschko.docker-java-application' version '4.2.0'
-    id 'com.bmuschko.docker-remote-api' version '4.2.0'
+    id 'com.bmuschko.docker-remote-api' version '4.3.0'
+    id 'com.bmuschko.docker-java-application' version '4.3.0'
 }
+
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
 
 dependencies {
 
@@ -19,15 +21,11 @@ application {
     applicationDefaultJvmArgs = ["-Dvertx.disableDnsResolver=true"]
 }
 
-dockerDistTar {
+dockerCreateDockerfile {
     environmentVariable('JAVA_OPTS', '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:+DisableExplicitGC -Xms512m -Xmx512m -XX:+UseG1GC')
 }
 
 docker {
-
-//    url = 'https://192.168.14.4:2376'
-//    certPath = new File(System.properties['user.home'], '.docker/machine/certs/')
-
     javaApplication {
         baseImage = 'openjdk:8-jre-alpine'
         maintainer = 'Gadi Eichhorn "gadi.eichhorn@realisedatasystems.com"'
@@ -36,4 +34,11 @@ docker {
     }
 }
 
-build.finalizedBy(dockerBuildImage)
+task buildImage(type: DockerBuildImage) {
+    dependsOn dockerBuildImage
+    tags.add('effectus/' + project.name + ':latest')
+    tags.add('effectus/' + project.name + ':' + project.version)
+    tags.add('effectus/' + project.name + ':' + project.version + '.' + System.currentTimeMillis())
+}
+
+build.finalizedBy(buildImage)

@@ -55,6 +55,11 @@ import { ResourceGQL } from "./gql/resource.query";
 import { ResourcesByAccountGQL } from "./gql/resources-by-account.query";
 import { ResourcesByTeamGQL } from "./gql/resources-by-team.query";
 import { CustomerCreateComponent } from "./components/customer-create/customer-create.component";
+import { TaskGQL } from "./gql/task.query";
+import { TasksGQL } from "./gql/tasks.query";
+import { TasksByAccountGQL } from "./gql/tasks-by-account.query";
+import { TasksByProjectGQL } from "./gql/tasks-by-project.query";
+import { TasksByCustomerGQL } from "./gql/tasks-by-customer.query";
 
 @NgModule({
   declarations: [
@@ -110,6 +115,11 @@ import { CustomerCreateComponent } from "./components/customer-create/customer-c
     TeamGQL,
     TeamsGQL,
     TeamsByAccountGQL,
+    TaskGQL,
+    TasksGQL,
+    TasksByAccountGQL,
+    TasksByProjectGQL,
+    TasksByCustomerGQL,
     ResourceGQL,
     ResourcesGQL,
     ResourcesByAccountGQL,
