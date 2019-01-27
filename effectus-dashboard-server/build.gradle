@@ -35,6 +35,7 @@ docker {
 }
 
 task buildImage(type: DockerBuildImage) {
+    dependsOn dockerBuildImage
     tags.add('effectus/' + project.name + ':latest')
     tags.add('effectus/' + project.name + ':' + project.version)
     tags.add('effectus/' + project.name + ':' + project.version + '.' + System.currentTimeMillis())
