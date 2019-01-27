@@ -9,13 +9,6 @@ services:
     networks:
       - effectus
 
-  dashobard:
-    image: effectus/effectus-dashboard-server:latest
-    ports:
-      - 8080:8080
-    networks:
-      - effectus
-
   ignite:
     image: effectus/effectus-ignite-server:latest
     depends_on:
@@ -40,13 +33,6 @@ services:
       - 3000:3000
     networks:
       - effectus
-
-#  keycloak:
-#    image: jboss/keycloak:latest
-#    ports:
-#      - 8000:8000
-#    networks:
-#      - effectus
 
 networks:
   effectus:

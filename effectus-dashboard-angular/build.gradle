@@ -13,5 +13,4 @@ task buildProduction(type: NpmTask) {
 }
 
 processResources.dependsOn(npmInstall)
-//npmInstall.finalizedBy(auditFix)
 processResources.finalizedBy(buildProduction)
