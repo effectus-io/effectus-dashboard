@@ -163,6 +163,7 @@ gradle-app.setting
 **/.project
 **/.settings
 .classpath
+**/.vscode/
 
 # compiled
 **/bin
