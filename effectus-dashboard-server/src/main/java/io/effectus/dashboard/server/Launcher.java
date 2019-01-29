@@ -1,6 +1,7 @@
 package io.effectus.dashboard.server;
 
 import io.effectus.dashboard.verticle.DashboardVerticle;
+import io.effectus.dashboard.verticle.DashboardVerticleConfiguration;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;
 import io.vertx.core.VertxOptions;
@@ -24,12 +25,14 @@ public class Launcher {
         ClusterManager mgr = new ZookeeperClusterManager(zkConfig);
         VertxOptions options = new VertxOptions().setClusterManager(mgr);
 
+        DashboardVerticleConfiguration config = DashboardVerticleConfiguration.builder().port(8080).build();
+
         Vertx.clusteredVertx(options, res -> {
             if (res.succeeded()) {
                 Vertx vertx = res.result();
                 log.info("Vertx: {}", vertx);
 
-                vertx.deployVerticle(new DashboardVerticle(), new DeploymentOptions(), deploy -> {
+                vertx.deployVerticle(new DashboardVerticle(), new DeploymentOptions().setConfig(JsonObject.mapFrom(config)), deploy -> {
                     if (deploy.succeeded()) {
                         log.info("Deployed: {}", deploy.result());
                     } else {

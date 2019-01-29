@@ -14,14 +14,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DashboardVerticle extends AbstractVerticle {
 
+    private DashboardVerticleConfiguration config;
+
     @Override
     public void init(Vertx vertx, Context context) {
         super.init(vertx, context);
         log.info("INIT: {}", context);
+        this.config = context.config().mapTo(DashboardVerticleConfiguration.class);
     }
 
     @Override
-    public void start(Future<Void> startFuture) throws Exception {
+    public void start(Future<Void> startFuture) {
         log.info("START");
 
         HttpServer server = vertx.createHttpServer();
@@ -33,11 +36,12 @@ public class DashboardVerticle extends AbstractVerticle {
         router.route(HttpMethod.GET, "/*")
                 .handler(StaticHandler.create("dashboard", this.getClass().getClassLoader()).setCachingEnabled(false));
 
-        server.requestHandler(router).listen(8080, event -> {
+        server.requestHandler(router).listen(config.getPort(), event -> {
             if (event.succeeded()) {
-                log.info("DASHBOARD server listening on port 8080");
+                log.info("DASHBOARD server listening on port: {}", config.getPort());
                 startFuture.complete();
             } else {
+                log.warn("Failed to start DASHBOARD server on port: {}", config.getPort());
                 startFuture.fail(event.cause());
             }
         });
