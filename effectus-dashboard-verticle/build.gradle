@@ -11,6 +11,7 @@ dependencies {
     compile group: 'io.vertx', name: 'vertx-service-discovery', version: vertx
 
     testCompile group: 'io.vertx', name: 'vertx-junit5', version: vertx
+    testCompile group: 'io.vertx', name: 'vertx-web-client', version: vertx
 
 }
 

@@ -16,4 +16,5 @@ public class DashboardVerticleConfiguration {
     public DashboardVerticleConfiguration(int port) {
         this.port = port;
     }
+
 }
